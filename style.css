@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+#boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+}
+#boxOne, #boxTwo, #boxThree, #boxFour, #boxFive, #boxSix {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px;
+}
