@@ -53,8 +53,20 @@ console.log(`box5: ${boxFiveValue}`);
 console.log(`box6: ${boxSixValue}`);
 
 const resultVerifier = (value, element) => {
-    if (value == result.innerHTML) {
-        alert("Correct");
+    if (value === result.innerHTML) {
+        boxOne.style.backgroundColor = value;
+        boxTwo.style.backgroundColor = value;
+        boxThree.style.backgroundColor = value;
+        boxFour.style.backgroundColor = value;
+        boxFive.style.backgroundColor = value;
+        boxSix.style.backgroundColor = value;
+
+        boxOne.style.visibility = "visible";
+        boxTwo.style.visibility = "visible";
+        boxThree.style.visibility = "visible";
+        boxFour.style.visibility = "visible";
+        boxFive.style.visibility = "visible";
+        boxSix.style.visibility = "visible";
     }
     else {
         element.style.visibility = "hidden";
