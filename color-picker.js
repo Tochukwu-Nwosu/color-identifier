@@ -52,3 +52,11 @@ console.log(`box4: ${boxFourValue}`);
 console.log(`box5: ${boxFiveValue}`);
 console.log(`box6: ${boxSixValue}`);
 
+const resultVerifier = (value, element) => {
+    if (value == result.innerHTML) {
+        alert("Correct");
+    }
+    else {
+        element.style.visibility = "hidden";
+    }
+}
