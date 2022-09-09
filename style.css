@@ -17,7 +17,7 @@ h1, span {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    max-width: 800px;
+    max-width: 600px;
     margin: 20px auto;
 }
 button {

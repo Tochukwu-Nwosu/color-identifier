@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Picker</title>
+    <title>Color Identifier</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,19 +12,18 @@
 
     <div id="control">
         <span>Guess the color</span>
-        <button type="reset">Reset</button>
+        <button>Reset</button>
     </div>
     
     <main id="boxContainer">
-        <div id="boxOne" onclick="resultVerifier(boxOneValue, boxOne)" data-tilt></div>
-        <div id="boxTwo" onclick="resultVerifier(boxTwoValue, boxTwo)" data-tilt></div>
-        <div id="boxThree" onclick="resultVerifier(boxThreeValue, boxThree)" data-tilt></div>
-        <div id="boxFour" onclick="resultVerifier(boxFourValue, boxFour)" data-tilt></div>
-        <div id="boxFive" onclick="resultVerifier(boxFiveValue, boxFive)" data-tilt></div>
-        <div id="boxSix" onclick="resultVerifier(boxSixValue, boxSix)" data-tilt></div>
+        <div id="boxOne" data-tilt></div>
+        <div id="boxTwo" data-tilt></div>
+        <div id="boxThree" data-tilt></div>
+        <div id="boxFour" data-tilt></div>
+        <div id="boxFive" data-tilt></div>
+        <div id="boxSix" data-tilt></div>
     </main>
     
-
 
     <script src="color-picker.js"></script>
     <script src="vanilla-tilt.js"></script>

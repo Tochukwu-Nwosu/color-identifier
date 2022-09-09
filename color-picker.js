@@ -5,7 +5,8 @@ let boxFour = document.querySelector("#boxFour");
 let boxFive = document.querySelector("#boxFive");
 let boxSix = document.querySelector("#boxSix");
 let result = document.querySelector("h1");
-// let text = document.querySelector("p");
+let text = document.querySelector("span");
+let reset = document.querySelector("button");
 
 // This function generates random numbers from min to max.
 const getRndInteger = (min, max) => {
@@ -46,16 +47,17 @@ const resultVerifier = (value, element) => {
         boxFive.style.visibility = "visible";
         boxSix.style.visibility = "visible";
 
-        // text.innerHTML = "Correct!";
-        // text.style.color = "rgb(0, 255, 0)";
+        text.innerHTML = "Correct!";
+        text.style.color = "rgb(0, 255, 0)";
     }
     else {
         element.style.visibility = "hidden";
-        // text.innerHTML = "Incorrect!";
-        // text.style.color = "rgb(255, 0, 0)";
+        text.innerHTML = "Incorrect!";
+        text.style.color = "rgb(255, 0, 0)";
     }
 }
 
+// These statements assign valid rgb values.
 let boxOneValue = colorGenetator();
 let boxTwoValue = colorGenetator();
 let boxThreeValue = colorGenetator();
@@ -74,9 +76,24 @@ boxSix.style.backgroundColor = boxSixValue;
 // This statement displays the result generated to the user.
 result.innerHTML = resultGenerator();
 
-console.log(`box1: ${boxOneValue}`);
+/*        THIS SECTION HANDLES EVENTS        */
+
+reset.addEventListener('click', e => {location.reload();})
+boxOne.addEventListener('click', e => {resultVerifier(boxOneValue, boxOne);})
+boxTwo.addEventListener('click', e => {resultVerifier(boxTwoValue, boxTwo);})
+boxThree.addEventListener('click', e => {resultVerifier(boxThreeValue, boxThree);})
+boxFour.addEventListener('click', e => {resultVerifier(boxFourValue, boxFour);})
+boxFive.addEventListener('click', e => {resultVerifier(boxFiveValue, boxFive);})
+boxSix.addEventListener('click', e => {resultVerifier(boxSixValue, boxSix);})
+
+
+
+
+
+
+/*console.log(`box1: ${boxOneValue}`);
 console.log(`box2: ${boxTwoValue}`);
 console.log(`box3: ${boxThreeValue}`);
 console.log(`box4: ${boxFourValue}`);
 console.log(`box5: ${boxFiveValue}`);
-console.log(`box6: ${boxSixValue}`);
+console.log(`box6: ${boxSixValue}`);*/
