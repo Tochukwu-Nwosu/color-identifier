@@ -5,7 +5,7 @@ let boxFour = document.querySelector("#boxFour");
 let boxFive = document.querySelector("#boxFive");
 let boxSix = document.querySelector("#boxSix");
 let result = document.querySelector("h1");
-let text = document.querySelector("p");
+// let text = document.querySelector("p");
 
 // This function generates random numbers from min to max.
 const getRndInteger = (min, max) => {
@@ -46,13 +46,13 @@ const resultVerifier = (value, element) => {
         boxFive.style.visibility = "visible";
         boxSix.style.visibility = "visible";
 
-        text.innerHTML = "Correct!";
-        text.style.color = "rgb(0, 255, 0)";
+        // text.innerHTML = "Correct!";
+        // text.style.color = "rgb(0, 255, 0)";
     }
     else {
         element.style.visibility = "hidden";
-        text.innerHTML = "Incorrect!";
-        text.style.color = "rgb(255, 0, 0)";
+        // text.innerHTML = "Incorrect!";
+        // text.style.color = "rgb(255, 0, 0)";
     }
 }
 

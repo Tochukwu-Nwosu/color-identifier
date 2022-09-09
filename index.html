@@ -9,7 +9,12 @@
 </head>
 <body>
     <h1></h1>
-    <p>Guess the color</p>
+
+    <div id="control">
+        <span>Guess the color</span>
+        <button type="reset">Reset</button>
+    </div>
+    
     <main id="boxContainer">
         <div id="boxOne" onclick="resultVerifier(boxOneValue, boxOne)" data-tilt></div>
         <div id="boxTwo" onclick="resultVerifier(boxTwoValue, boxTwo)" data-tilt></div>
