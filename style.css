@@ -70,7 +70,7 @@ button:active {
 }
 input[type="button"] {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     border: none;
     padding: 5px 8px;
@@ -81,7 +81,7 @@ input[type="button"] {
 }
 .lightMode input[type="button"] {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     border: none;
     padding: 5px 8px;
@@ -97,11 +97,35 @@ input[type="button"] {
         height: 100px;
         width: 100px;
     }
+    input[type="button"] {
+        padding: 3px;
+    }
+}
+@media screen and (max-width: 400px) {
+    h1 {
+        font-family: 10px;
+    }
+    input[type="button"] {
+        top: 5px;
+        right: 5px;
+    }
+    .lightMode input[type="button"] {
+        top: 5px;
+        right: 5px;
+    }
 }
 @media screen and (max-height: 580px) {
     #boxOne, #boxTwo, #boxThree, #boxFour, #boxFive, #boxSix {
         height: 100px;
         width: 100px;
+    }
+    input[type="button"] {
+        top: 10px;
+        right: 10px;
+    }
+    .lightMode input[type="button"] {
+        top: 10px;
+        right: 10px;
     }
 }
 @media screen and (max-height: 375px) {
