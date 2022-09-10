@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .darkMode {
     position: relative;
@@ -36,6 +36,7 @@ button {
     padding: 10px 16px;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
@@ -68,26 +69,21 @@ button:active {
     border-radius: 10px;
     margin: 10px;
 }
-input[type="button"] {
+.fa-moon {
     position: absolute;
     top: 20px;
     right: 20px;
-    border: none;
-    padding: 5px 8px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
-.lightMode input[type="button"] {
+.lightMode .fa-moon {
     position: absolute;
     top: 20px;
     right: 20px;
-    border: none;
-    padding: 5px 8px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
@@ -97,35 +93,24 @@ input[type="button"] {
         height: 100px;
         width: 100px;
     }
-    input[type="button"] {
-        padding: 3px;
+    .fa-moon {
+        top: 10px;
+        right: 10px;
+    }
+    .lightMode .fa-moon {
+        top: 10px;
+        right: 10px;
     }
 }
 @media screen and (max-width: 400px) {
     h1 {
         font-family: 10px;
     }
-    input[type="button"] {
-        top: 5px;
-        right: 5px;
-    }
-    .lightMode input[type="button"] {
-        top: 5px;
-        right: 5px;
-    }
 }
 @media screen and (max-height: 580px) {
     #boxOne, #boxTwo, #boxThree, #boxFour, #boxFive, #boxSix {
         height: 100px;
         width: 100px;
-    }
-    input[type="button"] {
-        top: 10px;
-        right: 10px;
-    }
-    .lightMode input[type="button"] {
-        top: 10px;
-        right: 10px;
     }
 }
 @media screen and (max-height: 375px) {

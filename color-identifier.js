@@ -10,18 +10,18 @@ let boxFour = document.querySelector("#boxFour");
 let boxFive = document.querySelector("#boxFive");
 let boxSix = document.querySelector("#boxSix");
 let mode = document.querySelector(".darkMode");
-let modeButton = document.querySelector("input");
+let modeButton = document.querySelector("i");
 
 
 // This function changes the mode of the application between dark and light.
 const modeChange = () => {
     if (mode.className === "darkMode") {
         mode.className = "lightMode";
-        modeButton.value = "Dark";
+        modeButton.style.color = "rgb(0, 0, 0)";
     }
     else {
         mode.className = "darkMode";
-        modeButton.value = "Light";
+        modeButton.style.color = "rgb(255, 255, 255)";
     }
 }
 
