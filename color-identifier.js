@@ -1,13 +1,15 @@
-let mode = document.querySelector(".darkMode");
+
 let result = document.querySelector("h1");
 let text = document.querySelector("span");
 let reset = document.querySelector("button");
+let boxContainer = document.querySelector("#boxContainer");
 let boxOne = document.querySelector("#boxOne");
 let boxTwo = document.querySelector("#boxTwo");
 let boxThree = document.querySelector("#boxThree");
 let boxFour = document.querySelector("#boxFour");
 let boxFive = document.querySelector("#boxFive");
 let boxSix = document.querySelector("#boxSix");
+let mode = document.querySelector(".darkMode");
 let modeButton = document.querySelector("input");
 
 
@@ -47,7 +49,16 @@ const resultGenerator = () => {
 // This function checks if the option the user selects is the right option.
 const resultVerifier = (value, element) => {
     if (value === result.innerHTML) {
-        // These statements give all boxes the same color and make them visible.
+        /* These statements gives all boxes the same color-value, color and make them visible. */
+
+        // 55-60 stops a box from being clicked after the right box has been clicked.
+        boxOneValue = value; 
+        boxTwoValue = value;
+        boxThreeValue = value;
+        boxFourValue = value;
+        boxFiveValue = value;
+        boxSixValue = value;
+
         boxOne.style.backgroundColor = value;
         boxTwo.style.backgroundColor = value;
         boxThree.style.backgroundColor = value;
@@ -72,28 +83,49 @@ const resultVerifier = (value, element) => {
     }
 }
 
-// These statements assign valid rgb values.
-let boxOneValue = colorGenetator();
-let boxTwoValue = colorGenetator();
-let boxThreeValue = colorGenetator();
-let boxFourValue = colorGenetator();
-let boxFiveValue = colorGenetator();
-let boxSixValue = colorGenetator();
+// This function generates the game.
+const gameGenerator = () => {
+    // These statements assigns random valid rgb values.
+    boxOneValue = colorGenetator();
+    boxTwoValue = colorGenetator();
+    boxThreeValue = colorGenetator();
+    boxFourValue = colorGenetator();
+    boxFiveValue = colorGenetator();
+    boxSixValue = colorGenetator();
 
-// These statements assigns random colors to be displayed in each box.
-boxOne.style.backgroundColor = boxOneValue;
-boxTwo.style.backgroundColor = boxTwoValue;
-boxThree.style.backgroundColor = boxThreeValue;
-boxFour.style.backgroundColor = boxFourValue;
-boxFive.style.backgroundColor = boxFiveValue;
-boxSix.style.backgroundColor = boxSixValue;
+    // These statements assigns random colors to be displayed in each box.
+    boxOne.style.backgroundColor = boxOneValue;
+    boxTwo.style.backgroundColor = boxTwoValue;
+    boxThree.style.backgroundColor = boxThreeValue;
+    boxFour.style.backgroundColor = boxFourValue;
+    boxFive.style.backgroundColor = boxFiveValue;
+    boxSix.style.backgroundColor = boxSixValue;
 
-// This statement displays the result generated to the user.
-result.innerHTML = resultGenerator();
+    // These statements is to make all the boxes visible (NOTE: this fix the bug in the reset button)
+    boxOne.style.visibility = "visible";
+    boxTwo.style.visibility = "visible";
+    boxThree.style.visibility = "visible";
+    boxFour.style.visibility = "visible";
+    boxFive.style.visibility = "visible";
+    boxSix.style.visibility = "visible";
+
+    // This statement displays the result generated to the user.
+    result.innerHTML = resultGenerator();
+
+    text.innerHTML = "Guess the color";
+    if (mode.className === "darkMode") {
+        text.style.color = "rgb(255, 255, 255)";
+    }
+    else {
+        text.style.color = "rgb(0, 0, 0)";
+    }
+}
+
+gameGenerator(); // Loads the game when application is refreshed.
 
 /*        THIS SECTION HANDLES EVENTS        */
 
-reset.addEventListener('click', e => {location.reload();})
+reset.addEventListener('click', e => {gameGenerator();})
 boxOne.addEventListener('click', e => {resultVerifier(boxOneValue, boxOne);})
 boxTwo.addEventListener('click', e => {resultVerifier(boxTwoValue, boxTwo);})
 boxThree.addEventListener('click', e => {resultVerifier(boxThreeValue, boxThree);})
@@ -101,15 +133,3 @@ boxFour.addEventListener('click', e => {resultVerifier(boxFourValue, boxFour);})
 boxFive.addEventListener('click', e => {resultVerifier(boxFiveValue, boxFive);})
 boxSix.addEventListener('click', e => {resultVerifier(boxSixValue, boxSix);})
 modeButton.addEventListener('click', e => {modeChange();})
-
-
-
-
-
-
-/*console.log(`box1: ${boxOneValue}`);
-console.log(`box2: ${boxTwoValue}`);
-console.log(`box3: ${boxThreeValue}`);
-console.log(`box4: ${boxFourValue}`);
-console.log(`box5: ${boxFiveValue}`);
-console.log(`box6: ${boxSixValue}`);*/
