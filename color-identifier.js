@@ -1,12 +1,27 @@
+let mode = document.querySelector(".darkMode");
+let result = document.querySelector("h1");
+let text = document.querySelector("span");
+let reset = document.querySelector("button");
 let boxOne = document.querySelector("#boxOne");
 let boxTwo = document.querySelector("#boxTwo");
 let boxThree = document.querySelector("#boxThree");
 let boxFour = document.querySelector("#boxFour");
 let boxFive = document.querySelector("#boxFive");
 let boxSix = document.querySelector("#boxSix");
-let result = document.querySelector("h1");
-let text = document.querySelector("span");
-let reset = document.querySelector("button");
+let modeButton = document.querySelector("input");
+
+
+// This function changes the mode of the application between dark and light.
+const modeChange = () => {
+    if (mode.className === "darkMode") {
+        mode.className = "lightMode";
+        modeButton.value = "Dark";
+    }
+    else {
+        mode.className = "darkMode";
+        modeButton.value = "Light";
+    }
+}
 
 // This function generates random numbers from min to max.
 const getRndInteger = (min, max) => {
@@ -85,6 +100,7 @@ boxThree.addEventListener('click', e => {resultVerifier(boxThreeValue, boxThree)
 boxFour.addEventListener('click', e => {resultVerifier(boxFourValue, boxFour);})
 boxFive.addEventListener('click', e => {resultVerifier(boxFiveValue, boxFive);})
 boxSix.addEventListener('click', e => {resultVerifier(boxSixValue, boxSix);})
+modeButton.addEventListener('click', e => {modeChange();})
 
 
 

@@ -8,22 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1></h1>
+    <div class="darkMode">
+        <h1></h1>
 
-    <div id="control">
-        <span>Guess the color</span>
-        <button>Reset</button>
+        <div id="control">
+            <span>Guess the color</span>
+            <button>Reset</button>
+        </div>
+    
+        <main id="boxContainer">
+            <div id="boxOne" data-tilt></div>
+            <div id="boxTwo" data-tilt></div>
+            <div id="boxThree" data-tilt></div>
+            <div id="boxFour" data-tilt></div>
+            <div id="boxFive" data-tilt></div>
+            <div id="boxSix" data-tilt></div>
+        </main>
+
+        <input type="button" value="Light">
     </div>
-    
-    <main id="boxContainer">
-        <div id="boxOne" data-tilt></div>
-        <div id="boxTwo" data-tilt></div>
-        <div id="boxThree" data-tilt></div>
-        <div id="boxFour" data-tilt></div>
-        <div id="boxFive" data-tilt></div>
-        <div id="boxSix" data-tilt></div>
-    </main>
-    
+
 
     <script src="color-identifier.js"></script>
     <script src="vanilla-tilt.js"></script>
