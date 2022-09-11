@@ -1,7 +1,5 @@
 # Color-identifier
 
----
-
 Can you guess a color by its rgb value? This project is a "color-identifier" game that tests your knowledge on rgb color values.
 
 ## What is RGB?
