@@ -18,14 +18,14 @@ const modeChange = () => {
         mode.className = "lightMode";
         modeButton.style.color = "rgb(0, 0, 0)";
         // This if statement fixed the "Guess the color" bug
-        if (text.innerHTML === "Guess the color") {
+        if (text.innerHTML == "Guess the color") {
             text.style.color = "rgb(0, 0, 0)";
         }
     }
     else {
         mode.className = "darkMode";
         modeButton.style.color = "rgb(255, 255, 255)";
-        if (text.innerHTML === "Guess the color") {
+        if (text.innerHTML == "Guess the color") {
             text.style.color = "rgb(255, 255, 255)";
         }
     }
