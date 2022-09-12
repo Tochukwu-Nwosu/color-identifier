@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="wgitidth=device-width, initial-scale=1.0" />
     <title>Color Identifier</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="darkMode">
+      <div class="container">
         <h1></h1>
+      </div>
 
-        <div id="control">
-            <span></span>
-            <button>Reset</button>
-        </div>
-    
-        <main id="boxContainer">
-            <div id="boxOne" data-tilt></div>
-            <div id="boxTwo" data-tilt></div>
-            <div id="boxThree" data-tilt></div>
-            <div id="boxFour" data-tilt></div>
-            <div id="boxFive" data-tilt></div>
-            <div id="boxSix" data-tilt></div>
-        </main>
+      <div id="control">
+        <span></span>
+        <button>Reset</button>
+      </div>
 
-        <i class="fas fa-moon" title="Mode"></i>
+      <main id="boxContainer">
+        <div id="boxOne" data-tilt></div>
+        <div id="boxTwo" data-tilt></div>
+        <div id="boxThree" data-tilt></div>
+        <div id="boxFour" data-tilt></div>
+        <div id="boxFive" data-tilt></div>
+        <div id="boxSix" data-tilt></div>
+      </main>
+
+      <i class="fas fa-moon" title="Mode"></i>
     </div>
-
 
     <script src="color-identifier.js"></script>
     <script src="vanilla-tilt.js"></script>
-</body>
+  </body>
 </html>
