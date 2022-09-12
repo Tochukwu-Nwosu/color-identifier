@@ -1,4 +1,3 @@
-
 let result = document.querySelector("h1");
 let text = document.querySelector("span");
 let reset = document.querySelector("button");
@@ -18,10 +17,17 @@ const modeChange = () => {
     if (mode.className === "darkMode") {
         mode.className = "lightMode";
         modeButton.style.color = "rgb(0, 0, 0)";
+        // This if statement fixed the "Guess the color" bug
+        if (text.innerHTML === "Guess the color") {
+            text.style.color = "rgb(0, 0, 0)";
+        }
     }
     else {
         mode.className = "darkMode";
         modeButton.style.color = "rgb(255, 255, 255)";
+        if (text.innerHTML === "Guess the color") {
+            text.style.color = "rgb(255, 255, 255)";
+        }
     }
 }
 
@@ -101,7 +107,7 @@ const gameGenerator = () => {
     boxFive.style.backgroundColor = boxFiveValue;
     boxSix.style.backgroundColor = boxSixValue;
 
-    // These statements is to make all the boxes visible (NOTE: this fix the bug in the reset button)
+    // These statements is to make all the boxes visible (NOTE: this fixed the bug in the reset button)
     boxOne.style.visibility = "visible";
     boxTwo.style.visibility = "visible";
     boxThree.style.visibility = "visible";
