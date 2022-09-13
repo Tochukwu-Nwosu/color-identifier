@@ -1,138 +1,163 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 .darkMode {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    padding-top: 40px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 40px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .lightMode {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    padding-top: 40px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 40px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
-h1, span {
-    text-align: center;
+h1,
+span {
+  text-align: center;
 }
 #control {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 250px;
-    margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  margin: 20px auto;
 }
 button {
-    border: none;
-    padding: 10px 16px;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 .lightMode button {
-    border: none;
-    padding: 10px 16px;
-    border-radius: 5px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 /* changes the style of the button when hover upon*/
 button:hover {
-    background-color: green;
-    font-size: 20px;
+  background-color: green;
+  transition: all ease-in-out 1s;
 }
 /* creating a div for the RGB text*/
-.container{
-    align-content: center;
-    width: 400px;
-    height: 100px;
-    margin: 0 auto;
+.container {
+  align-content: center;
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
 }
-.container h1{
-border: 2px solid black;
-border-radius: 5px;
-margin-bottom: 2.5rem;
-padding: 5px;
-color:white;
-background-color: black;
+.lightMode .head {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background-color: black;
 }
-button:active {
-    transform: scale(0.8);
+.darkMode .head {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  background-color: white;
 }
+
 #boxContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
-    margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 20px auto;
 }
-#boxOne, #boxTwo, #boxThree, #boxFour, #boxFive, #boxSix {
-    height: 200px;
-    width: 200px;
-    border-radius: 10px;
-    margin: 10px;
+#boxOne,
+#boxTwo,
+#boxThree,
+#boxFour,
+#boxFive,
+#boxSix {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 10px;
 }
 .fa-moon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 .lightMode .fa-moon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.2rem;
-    color: rgb(0, 0, 0);
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
-    #boxOne, #boxTwo, #boxThree, #boxFour, #boxFive, #boxSix {
-        height: 100px;
-        width: 100px;
-    }
-    .fa-moon {
-        top: 10px;
-        right: 10px;
-    }
-    .lightMode .fa-moon {
-        top: 10px;
-        right: 10px;
-    }
+  #boxOne,
+  #boxTwo,
+  #boxThree,
+  #boxFour,
+  #boxFive,
+  #boxSix {
+    height: 100px;
+    width: 100px;
+  }
+  .fa-moon {
+    top: 10px;
+    right: 10px;
+  }
+  .lightMode .fa-moon {
+    top: 10px;
+    right: 10px;
+  }
 }
 @media screen and (max-width: 400px) {
-    h1 {
-        font-family: 10px;
-    }
+  h1 {
+    font-family: 10px;
+  }
 }
 @media screen and (max-height: 580px) {
-    #boxOne, #boxTwo, #boxThree, #boxFour, #boxFive, #boxSix {
-        height: 100px;
-        width: 100px;
-    }
+  #boxOne,
+  #boxTwo,
+  #boxThree,
+  #boxFour,
+  #boxFive,
+  #boxSix {
+    height: 100px;
+    width: 100px;
+  }
 }
 @media screen and (max-height: 375px) {
-    #boxOne, #boxTwo, #boxThree, #boxFour, #boxFive, #boxSix {
-        height: 70px;
-        width: 70px;
-    }
+  #boxOne,
+  #boxTwo,
+  #boxThree,
+  #boxFour,
+  #boxFive,
+  #boxSix {
+    height: 70px;
+    width: 70px;
+  }
 }

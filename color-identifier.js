@@ -10,7 +10,7 @@ let boxFive = document.querySelector("#boxFive");
 let boxSix = document.querySelector("#boxSix");
 let mode = document.querySelector(".darkMode");
 let modeButton = document.querySelector("i");
-
+let container = document.querySelector('.head')
 
 // This function changes the mode of the application between dark and light.
 const modeChange = () => {
