@@ -1,6 +1,6 @@
 # Color-identifier
 
-Can you guess a color by its rgb value? This project is a "color-identifier" game that tests your knowledge on rgb color values.
+Can you guess a color by its `rgb` value? This project is a `color-identifier` game that tests your knowledge on `rgb` color values.
 
 ## What is RGB?
 
@@ -8,11 +8,11 @@ Can you guess a color by its rgb value? This project is a "color-identifier" gam
 - g - Green
 - b - Blue
 
-An RGB color value is specified with: rgb(red, green, blue).
+An RGB color value is specified with: `rgb(red, green, blue)`.
 
 Each parameter (red, green, and blue) defines the intensity of the color as an integer between 0 and 255.
 
-For example, rgb(0, 0, 255) is rendered as blue, because the blue parameter is set to its highest value (255) and the others are set to 0.
+For example, `rgb(0, 0, 255)` is rendered as blue, because the blue parameter is set to its highest value (255) and the others are set to 0.
 
 ## Instruction
 
