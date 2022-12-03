@@ -131,11 +131,11 @@ gameGenerator(); // Loads the game when application is refreshed.
 
 /*        THIS SECTION HANDLES EVENTS        */
 
-reset.addEventListener('click', e => {gameGenerator();})
-boxOne.addEventListener('click', e => {resultVerifier(boxOneValue, boxOne);})
-boxTwo.addEventListener('click', e => {resultVerifier(boxTwoValue, boxTwo);})
-boxThree.addEventListener('click', e => {resultVerifier(boxThreeValue, boxThree);})
-boxFour.addEventListener('click', e => {resultVerifier(boxFourValue, boxFour);})
-boxFive.addEventListener('click', e => {resultVerifier(boxFiveValue, boxFive);})
-boxSix.addEventListener('click', e => {resultVerifier(boxSixValue, boxSix);})
-modeButton.addEventListener('click', e => {modeChange();})
+reset.addEventListener('click', () => {gameGenerator();})
+boxOne.addEventListener('click', () => {resultVerifier(boxOneValue, boxOne);})
+boxTwo.addEventListener('click', () => {resultVerifier(boxTwoValue, boxTwo);})
+boxThree.addEventListener('click', () => {resultVerifier(boxThreeValue, boxThree);})
+boxFour.addEventListener('click', () => {resultVerifier(boxFourValue, boxFour);})
+boxFive.addEventListener('click', () => {resultVerifier(boxFiveValue, boxFive);})
+boxSix.addEventListener('click', () => {resultVerifier(boxSixValue, boxSix);})
+modeButton.addEventListener('click', () => {modeChange();})
