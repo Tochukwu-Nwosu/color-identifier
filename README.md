@@ -21,6 +21,10 @@ Select the color that matches the displayed RGB value by clicking on any of the 
 You can reset the game by clicking the on reset button.
 You can switch from dark mode to light and vice versa by clicking the moon icon at the top-right-corner of your screen.
 
+## Use App
+
+[color-identifier](https://tochukwu-nwosu.github.io/color-identifier/)
+
 ## Contributor
 
 This project was created by [Tochukwu-Nwosu](https://github.com/Tochukwu-Nwosu)
