@@ -62,6 +62,11 @@ const resultVerifier = (value, element) => {
 
         text.innerHTML = "Correct!";
         text.style.color = "rgb(0, 255, 0)";
+        
+        // Add a delay of 1.3 seconds before resetting the game automatically
+        setTimeout(() => {
+          gameGenerator();
+        }, 1300);
     }
     else {
         element.style.visibility = "hidden";
