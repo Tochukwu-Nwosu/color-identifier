@@ -25,6 +25,7 @@ You can switch from dark mode to light and vice versa by clicking the moon icon 
 
 [color-identifier](https://tochukwu-nwosu.github.io/color-identifier/)
 
-## Contributor
+## Contributors
 
-This project was created by [Tochukwu-Nwosu](https://github.com/Tochukwu-Nwosu)
+- [Tochukwu Nwosu](https://github.com/Tochukwu-Nwosu)
+- [Kim Fom](https://github.com/kimfom01)
