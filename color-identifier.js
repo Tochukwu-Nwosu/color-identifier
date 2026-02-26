@@ -19,13 +19,15 @@ const getTheme = () => {
   const storedTheme = localStorage.getItem("theme");
   if (storedTheme === "lightMode") {
     mode.className = storedTheme;
-    modeButton.style.color = "rgb(0, 0, 0)";
-    text.style.color = "rgb(0, 0, 0)";
+    if (text.innerText === "Guess the color?") {
+      text.style.color = "rgb(15, 15, 15)";
+    }
   } else {
     localStorage.setItem("theme", "darkMode");
     mode.className = "darkMode";
-    modeButton.style.color = "rgb(255, 255, 255)";
-    text.style.color = "rgb(255, 255, 255)";
+    if (text.innerText === "Guess the color?") {
+      text.style.color = "rgb(255, 255, 255)";
+    }
   }
 };
 
@@ -38,13 +40,15 @@ const handleThemeChange = () => {
   if (storedTheme === "darkMode") {
     localStorage.setItem("theme", "lightMode");
     mode.className = "lightMode";
-    modeButton.style.color = "rgb(0, 0, 0)";
-    text.style.color = "rgb(0, 0, 0)";
+    if (text.innerText === "Guess the color?") {
+      text.style.color = "rgb(15, 15, 15)";
+    }
   } else {
     localStorage.setItem("theme", "darkMode");
     mode.className = "darkMode";
-    modeButton.style.color = "rgb(255, 255, 255)";
-    text.style.color = "rgb(255, 255, 255)";
+    if (text.innerText === "Guess the color?") {
+      text.style.color = "rgb(255, 255, 255)";
+    }
   }
 };
 
@@ -76,7 +80,7 @@ const resultVerifier = (value, element) => {
     }
 
     text.innerHTML = "Correct!";
-    text.style.color = "rgb(0, 255, 0)";
+    text.style.color = "rgba(10, 200, 10, .8)";
 
     // Add a delay of 1.3 seconds before resetting the game automatically
     setTimeout(() => {
@@ -85,7 +89,7 @@ const resultVerifier = (value, element) => {
   } else {
     element.style.visibility = "hidden";
     text.innerHTML = "Incorrect!";
-    text.style.color = "rgb(255, 0, 0)";
+    text.style.color = "rgba(200, 10, 10, .8)";
   }
 };
 
@@ -101,7 +105,7 @@ const gameGenerator = () => {
   // This statement displays the result generated to the user.
   result.innerHTML = resultGenerator();
 
-  text.innerHTML = "Guess the color";
+  text.innerHTML = "Guess the color?";
   if (mode.className === "darkMode") {
     text.style.color = "rgb(255, 255, 255)";
   } else {
